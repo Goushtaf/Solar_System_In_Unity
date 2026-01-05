@@ -1,3 +1,16 @@
 *.psd filter=lfs diff=lfs merge=lfs -text
 *.fbx filter=lfs diff=lfs merge=lfs -text
 *.png filter=lfs diff=lfs merge=lfs -text
+
+# Forcer la reconnaissance du C# pour les fichiers .cs
+*.cs linguist-language=CSharp
+
+# Ignorer les dossiers Unity qui contiennent des fichiers de données
+Assets/**/*.meta linguist-vendored
+Assets/**/*.unity linguist-vendored
+Assets/**/*.asset linguist-vendored
+Assets/**/*.prefab linguist-vendored
+
+# Si tu as des shaders qui causent l'erreur Mathematica
+*.shader linguist-language=hlsl
+*.cginc linguist-language=hlsl
